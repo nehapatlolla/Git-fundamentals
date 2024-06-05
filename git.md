@@ -134,3 +134,17 @@ This is my change from the remote branch.
 > > > > > > > branch-name
 
 ## How to avoid the git conflicts?
+
+- Pull Before Push
+
+## Rebase
+
+- log and rebase are in the reverse orders
+
+**Rebasing** is like picking up your work from one point and moving it to another. Imagine you started working on a project a while ago, but since then, others have made changes. Rebasing lets you incorporate those changes into your work smoothly.
+
+git rebase -i hEAD~4
+
+`-i`: This flag stands for "interactive". It tells Git that you want to perform an interactive rebase, which allows you to modify, reorder, squash, or drop commits during the rebase process.
+
+`HEAD~4`: This specifies the commit range to rebase. HEAD~4 refers to the commit that is four commits before the current HEAD (i.e., the last commit). So, it selects the last 4 commits on your current branch.
