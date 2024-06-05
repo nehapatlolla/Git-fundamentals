@@ -9,3 +9,6 @@ function fibonacci(n) {
 console.log(fibonacci(6)); // Output: 8
 
 console.log(fibonacci(8)); 
+console.log(fibonacci(40)); 
+
+console.log(fibonacci(78)); //this is the fourth commit

@@ -143,8 +143,14 @@ This is my change from the remote branch.
 
 **Rebasing** is like picking up your work from one point and moving it to another. Imagine you started working on a project a while ago, but since then, others have made changes. Rebasing lets you incorporate those changes into your work smoothly.
 
+````javascript
 git rebase -i hEAD~4
+```s
 
 `-i`: This flag stands for "interactive". It tells Git that you want to perform an interactive rebase, which allows you to modify, reorder, squash, or drop commits during the rebase process.
 
 `HEAD~4`: This specifies the commit range to rebase. HEAD~4 refers to the commit that is four commits before the current HEAD (i.e., the last commit). So, it selects the last 4 commits on your current branch.
+
+When you run this command, Git will open an interactive rebase window or editor (e.g., Vim or Nano) where you can see a list of the selected commits. From there, you can choose what you want to do with each commit, such as reordering them, squashing them into one commit, editing their messages, or even dropping them entirely. Once you save and close the editor, Git will apply your chosen changes and complete the rebase.
+
+````
