@@ -1,3 +1,21 @@
+## what is git
+
+Git is like a super-smart record keeper for all the changes you make to the project's files. It tracks every edit, addition, or deletion you and your team make. So, if someone messes something up, Git can help you roll back to an earlier, working version.
+
+To manage linux he invented the git.
+
+This is called as distributred systems
+
+### what?
+
+### Why?
+
+git is offline.
+
+### How?
+
+EVeryone has a copy, provides the backup.
+
 ## Git commands
 
 git init ---> to initialize the repository
@@ -62,10 +80,27 @@ Vim is an editor which will only open in git bash command line
   > verb + number + movement
   > // VIM tutor & Vim games
 
+## Three branches of GIT
+
+### What are ahead and behind?
+
+- Ahead: fast forward merge happens
+- Behind: Merge commit will happen
+  ![alt text](image.png)
+  ![alt text](image-1.png)
+
+## Semantic versioning:
+
+it is also called sem ver
+
+is a standard versioning scheme used in software development to convey meaning about the changes in a software package over time.
+
+![alt text](image-2.png)
+
 ### Different verbs in VIM
 
 1. Move up - k
-2. MOve down - j
+2. Move down - j
 3. Move left - h
 4. Move right - l
 5. Delete - d
@@ -78,3 +113,24 @@ Vim is an editor which will only open in git bash command line
 6. Save - w
 7. Exit - q
 8. To repeat recent command - .
+
+## Merging with the github
+
+## git conflicts
+
+In Git, conflicts happen when two or more people change the same part of a file in different ways. Git can't automatically decide which changes to keep, so it asks you to help resolve the conflict by choosing which changes to keep and which to discard.
+
+always pull the code first.
+
+when someone wants to edit the same line that you are fixing, it allows to create the PR, but doesn't allow to merge.
+
+## How to resolve the conflicts
+
+<<<<<<< HEAD
+This is my change from the local branch.
+=======
+This is my change from the remote branch.
+
+> > > > > > > branch-name
+
+## How to avoid the git conflicts?
