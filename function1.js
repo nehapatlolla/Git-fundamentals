@@ -1,5 +1,5 @@
 // Define a function to calculate the sum of two numbers
-function summy(hi, hell) {
+function sum(hi, hell) {
     return hi + hell;
 }
 
