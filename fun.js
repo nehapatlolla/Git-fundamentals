@@ -1,4 +1,11 @@
-function sum(a,b){
-    return a+b;
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
 }
-//this is very nice
+
+console.log(fibonacci(6)); // Output: 8
+
+console.log(fibonacci(8)); 
