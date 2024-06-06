@@ -143,14 +143,121 @@ This is my change from the remote branch.
 
 **Rebasing** is like picking up your work from one point and moving it to another. Imagine you started working on a project a while ago, but since then, others have made changes. Rebasing lets you incorporate those changes into your work smoothly.
 
-````javascript
+```javascript
 git rebase -i hEAD~4
-```s
+```
 
+```
 `-i`: This flag stands for "interactive". It tells Git that you want to perform an interactive rebase, which allows you to modify, reorder, squash, or drop commits during the rebase process.
 
 `HEAD~4`: This specifies the commit range to rebase. HEAD~4 refers to the commit that is four commits before the current HEAD (i.e., the last commit). So, it selects the last 4 commits on your current branch.
 
 When you run this command, Git will open an interactive rebase window or editor (e.g., Vim or Nano) where you can see a list of the selected commits. From there, you can choose what you want to do with each commit, such as reordering them, squashing them into one commit, editing their messages, or even dropping them entirely. Once you save and close the editor, Git will apply your chosen changes and complete the rebase.
 
-````
+- revert changes commit message.
+
+```
+
+Don't do rebase on the master, dev, staging branches . Only perform rebase on branches
+
+Because it modifies the data which we dont want to happen.
+
+## How do you merge in github or remote way?
+
+devops people merge to master, we merge it to the dev branch
+
+staging will be merged by testers
+
+- Go to Repository: Open the repository in your web browser.
+
+- Select Branch: Navigate to the branch you want to merge changes into.
+
+- Create Pull Request: Click on the "New pull request" button.
+
+- Compare Changes: Ensure the base branch is the one you want to merge into and compare changes with the branch containing the changes you want to merge.
+
+- Review Changes: Check the changes to ensure they're correct.
+
+- Merge Pull Request: If everything looks good, click the "Merge pull request" button.
+
+- Confirm Merge: Confirm the merge in the dialog box that appears.
+
+- Delete Branch (Optional): After merging, you may choose to delete the feature branch.
+
+## Stashing
+
+"stashing" in Git is a feature that allows you to temporarily store changes that are not ready to be committed, so you can work on something else without committing half-done work.
+
+Here's how you can use stashing in Git:
+
+Check Current Status: First, check the status of your working directory and staging area using git status to see which changes you want to stash.
+
+Stash Changes: To stash your changes, use the command git stash. This will stash both staged and unstaged changes.
+
+```javascript
+git stash
+```
+
+Check Stash List: You can see your list of stashes using git stash list.
+
+```javascript
+git stash list
+```
+
+Apply Stash: To apply the most recent stash, you can use git stash apply.
+
+```javascript
+git stash apply
+```
+
+If you have multiple stashes, you can apply a specific stash by its index (e.g., stash@{2}).
+
+```javascript
+git stash apply stash@{2}
+```
+
+Pop Stash: To apply the most recent stash and remove it from the stash list, you can use git stash pop.
+
+```javascript
+git stash pop
+```
+
+Clear Stash: If you no longer need the stashed changes, you can clear the stash list using git stash clear.
+
+```javascript
+git stash clear
+```
+
+Stashing is useful when you're in the middle of working on a feature or fixing a bug, and you need to switch to another task or branch temporarily. It allows you to save your changes without committing them and retrieve them later when you're ready to continue working.
+
+## Git rebase
+
+To keep the history in the straight line
+
+To do that we always need to the fast forward merge, but that may not be possible ,
+
+So, we make all commits to linear. > Git bisect is the command
+
+Imagine you and your friend are both writing code for a project. You're each working on different parts of the project in separate branches.
+
+**Merging:** When it's time to combine your work, you could just merge your friend's branch into yours. This might work fine, but if there are any bugs in your friend's code, they could get mixed in with yours, making it harder to track down and fix them later. `so no merge`
+
+**Rebasing:** Instead, you decide to rebase your branch onto your friend's. You carefully apply your changes on top of theirs, making sure everything still works as expected. This way, if there were any bugs in your friend's code, you have a chance to spot them and fix them before they get integrated with your changes. It's like taking your work and building on top of your friend's, ensuring that any issues are addressed before they become part of the main codebase.
+
+Daily morning, come and run this command
+
+```javascript
+git pull --rebase origin dev
+```
+
+## Key terminologies
+
+- Configuration Management{ related to branching strategy}
+- System - code
+- CI-> git - files(configuration item)
+- Release Management--branching strategy---> master, staging dev.
+- CI/CD - Continuous Integration/Continuous Deployment---> netlify
+- Audit---> 1.commit-->sign
+  2.Blame-->who last modified each line of a file
+
+![alt text](image-3.png)
