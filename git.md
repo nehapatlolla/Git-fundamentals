@@ -124,12 +124,14 @@ when someone wants to edit the same line that you are fixing, it allows to creat
 
 ## How to resolve the conflicts
 
+```
 <<<<<<< HEAD
 This is my change from the local branch.
 =======
 This is my change from the remote branch.
 
 > > > > > > > branch-name
+```
 
 ## How to avoid the git conflicts?
 
