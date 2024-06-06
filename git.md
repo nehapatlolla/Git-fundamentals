@@ -1,12 +1,10 @@
-## what is git
+# What is Git
 
 Git is like a super-smart record keeper for all the changes you make to the project's files. It tracks every edit, addition, or deletion you and your team make. So, if someone messes something up, Git can help you roll back to an earlier, working version.
 
 To manage linux he invented the git.
 
 This is called as distributred systems
-
-### what?
 
 ### Why?
 
@@ -116,7 +114,7 @@ is a standard versioning scheme used in software development to convey meaning a
 
 ## Merging with the github
 
-## git conflicts
+## Git conflicts
 
 In Git, conflicts happen when two or more people change the same part of a file in different ways. Git can't automatically decide which changes to keep, so it asks you to help resolve the conflict by choosing which changes to keep and which to discard.
 
@@ -261,3 +259,22 @@ git pull --rebase origin dev
   2.Blame-->who last modified each line of a file
 
 ![alt text](image-3.png)
+
+**Configuration management**
+
+- CI with Git: Git helps teams continuously combine and test their code changes automatically.
+- Audit in Git: Git keeps a detailed record of who did what in the project, helping track changes.
+- Baseline in Git: Think of it as a project snapshot that shows how everything looked at a specific time.
+- Accountability in Git: Git shows who's responsible for each change, encouraging ownership.
+- Change Management with Git: Git helps teams manage updates smoothly, like organizing and tracking edits.
+  ![alt text](image-4.png)
+
+### Key benefits
+
+> Traceability - Who? why?
+
+> Quality and consistency
+
+> Reduces the risk and errors
+
+> Change management
