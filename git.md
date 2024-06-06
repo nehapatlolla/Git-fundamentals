@@ -278,3 +278,36 @@ git pull --rebase origin dev
 > Reduces the risk and errors
 
 > Change management
+
+## Release management
+
+> planning --> 1. Branching strategy, Decide what you want to achieve with each release, what's most important, and what resources you need.
+
+> Governance----> Talks about the access level of each branch,Make sure there are rules in place to guide how releases happen, who makes decisions, and that everything follows the rules and standards.
+
+> Scheduling---> sprints, agile,Figure out when you're going to release things and how often, and make sure everything is coordinated properly.
+
+> Automation---> CI/CD, testing is a part of cI/CD , no human, Use computers to do as much of the work as possible, like testing and deploying code.
+
+> Contingency---> backup plans or roll back to older version.
+
+## SAAS,PAAS, IAAS
+
+Tools are netlify, CircleCI, render.com, jenkins
+
+**Saas**: You **use software that's hosted online**, like Gmail or Netflix. You access it through your web browser or a mobile app without needing to install anything on your computer. Proclink is a saas
+
+**Paas**: You get a platform for developing and deploying your own applications without worrying about the underlying infrastructure. It's like **renting a ready-made development environment** where you can focus on building your app, and the platform takes care of things like servers and databases for you. Heroku, netlify, render, vercale
+
+**Iaas**: building your own home from scratch, In IT they give computers for renting
+You **rent computing resources** like servers, storage, and networking from a cloud provider, such as Amazon Web Services (AWS) or Microsoft Azure. It's like renting a computer in the cloud instead of buying and maintaining physical servers.
+
+Build step uglifies your code.
+
+## How CI/CD makes release management easily?
+
+![alt text](image-7.png)
+
+In the image upto build it is CI and the rest is the CD
+
+these pipelines are build with the jenkins
