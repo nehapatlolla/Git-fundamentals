@@ -6,6 +6,8 @@ To manage linux he invented the git.
 
 This is called as distributred systems
 
+![alt text](image-8.png)
+
 ### Why?
 
 git is offline.
