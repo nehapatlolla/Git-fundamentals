@@ -40,7 +40,7 @@ Pushing the code through command line
 
 1. git init -> To initialize a repository
 2. git add path -> To stage the changes
-3. git status -> To check the file's current state
+3. git status -> To check the file's current state in working directory present
 4. git commit -m "message" -> savepoint with a message
 5. git log -> To Track the commits
    To exit from git log press 'q'
@@ -241,7 +241,13 @@ To keep the history in the straight line
 
 To do that we always need to the fast forward merge, but that may not be possible ,
 
-So, we make all commits to linear. > Git bisect is the command
+So, we make all commits to linear.
+
+```javascript
+Git bisect
+```
+
+is the command
 
 Imagine you and your friend are both writing code for a project. You're each working on different parts of the project in separate branches.
 
@@ -269,9 +275,10 @@ git pull --rebase origin dev
 
 **Configuration management**
 
-- CI with Git: Git helps teams continuously combine and test their code changes automatically.
+- CI configuration item with Git: Git helps teams continuously combine and test their code changes automatically.
 - Audit in Git: Git keeps a detailed record of who did what in the project, helping track changes.
 - Baseline in Git: Think of it as a project snapshot that shows how everything looked at a specific time.
+  savepoints, to fall back
 - Accountability in Git: Git shows who's responsible for each change, encouraging ownership.
 - Change Management with Git: Git helps teams manage updates smoothly, like organizing and tracking edits.
   ![alt text](image-4.png)
@@ -290,17 +297,17 @@ git pull --rebase origin dev
 
 > planning --> 1. Branching strategy, Decide what you want to achieve with each release, what's most important, and what resources you need.
 
-> Governance----> Talks about the access level of each branch,Make sure there are rules in place to guide how releases happen, who makes decisions, and that everything follows the rules and standards.
+> Governance----> Talks about the access level of each branch, Make sure there are rules in place to guide how releases happen, who makes decisions, and that everything follows the rules and standards.
 
 > Scheduling---> sprints, agile,Figure out when you're going to release things and how often, and make sure everything is coordinated properly.
 
-> Automation---> CI/CD, testing is a part of cI/CD , no human, Use computers to do as much of the work as possible, like testing and deploying code.
+> Automation---> CI/CD, testing is a part of CI/CD , no human, Use computers to do as much of the work as possible, like testing and deploying code.
 
 > Contingency---> backup plans or roll back to older version.
 
 ## SAAS,PAAS, IAAS
 
-Tools are netlify, CircleCI, render.com, jenkins
+Tools are netlify-paas, CircleCI-, render.com, jenkins
 
 **Saas**: You **use software that's hosted online**, like Gmail or Netflix. You access it through your web browser or a mobile app without needing to install anything on your computer. Proclink is a saas
 
@@ -317,4 +324,10 @@ Build step uglifies your code.
 
 In the image upto build it is CI and the rest is the CD
 
-these pipelines are build with the jenkins
+Why uglify?
+
+If the files are smaller, it will be easy to dowload, so uglification is done,
+
+It removes the comments and the code which is not used.
+
+These pipelines are build with the jenkins.
