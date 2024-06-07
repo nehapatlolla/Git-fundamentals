@@ -331,3 +331,13 @@ If the files are smaller, it will be easy to dowload, so uglification is done,
 It removes the comments and the code which is not used.
 
 These pipelines are build with the jenkins.
+
+git soft reset ---> edit first
+
+git reset delete entirely
+
+git revert makes a new commit to undo the mistake
+
+git reset --hard HEAD~2 deletes lat two commits completely
+
+git reset --soft HEAD~2 deletes commit but leave the change to correct and commit.
